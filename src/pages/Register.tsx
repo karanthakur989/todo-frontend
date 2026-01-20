@@ -8,7 +8,7 @@ function Register() {
   const [error, setError] = useState("");
 
   async function handleRegister() {
-    const res = await fetch("http://35.172.226.94/auth/register", {
+    const res = await fetch("http://54.196.61.196/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),

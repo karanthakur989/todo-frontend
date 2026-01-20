@@ -20,7 +20,7 @@ function App({ setToken }: setTokenProps) {
 
   useEffect(() => {
     async function getTodo() {
-      const res = await fetch("http://35.172.226.94/todos", {
+      const res = await fetch("http://54.196.61.196/todos", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -39,7 +39,7 @@ function App({ setToken }: setTokenProps) {
   async function addNote() {
     if (editingText.trim() === "") return;
 
-    const res = await fetch("http://35.172.226.94/todos", {
+    const res = await fetch("http://54.196.61.196/todos", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -64,7 +64,7 @@ function App({ setToken }: setTokenProps) {
   async function saveEdit() {
     if (editingId === null) return;
 
-    const res = await fetch(`http://35.172.226.94/todos/${editingId}`, {
+    const res = await fetch(`http://54.196.61.196/todos/${editingId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -87,7 +87,7 @@ function App({ setToken }: setTokenProps) {
   }
 
   async function deleteNote(id: number) {
-    const response = await fetch(`http://35.172.226.94/todos/${id}`, {
+    const response = await fetch(`http://54.196.61.196/todos/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,

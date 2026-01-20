@@ -13,7 +13,7 @@ function Login({ setToken }: LoginProps) {
 
   async function handleLogin() {
     setError("");
-    const res = await fetch("http://35.172.226.94/auth/login", {
+    const res = await fetch("http://54.196.61.196/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
